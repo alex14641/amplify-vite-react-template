@@ -16,7 +16,11 @@ function App() {
   }, []);
 
   function createTodo() {
-    client.models.Todo.create({ content: window.prompt("Todo content"), atime: Date.now() });
+    client.models.Todo.create({
+		content: window.prompt("Todo content"),
+		isDone: false,
+		atime: Date.now(),
+	});
   }
 
     
